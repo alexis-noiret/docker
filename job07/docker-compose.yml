@@ -1,0 +1,29 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: web-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - web-data:/usr/share/nginx/html
+    depends_on:
+      - ftp
+    restart: unless-stopped
+
+  ftp:
+    image: delfer/alpine-ftp-server
+    container_name: web-ftp
+    ports:
+      - "21:21"
+      - "21000-21010:21000-21010"
+    environment:
+      USERS: "alexis|ftp123|/usr/share/nginx/html"
+      ADDRESS: ${HOST_IP:-192.168.109.135}
+      MIN_PORT: 21000
+      MAX_PORT: 21010
+    volumes:
+      - web-data:/usr/share/nginx/html
+    restart: unless-stopped
+
+volumes:
+  web-data:
