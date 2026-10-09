@@ -37,7 +37,5 @@ cmd docker run --rm debian:stable-slim cat /etc/os-release
 cmd docker logs hello-test
 pause
 
-step "Suppression : le conteneur d'abord, puis l'image"
-cmd docker rm hello-test
-cmd docker rmi hello-world
-cmd docker ps -a
+info "Le conteneur hello-test et l'image hello-world sont conservés."
+info "Pour les supprimer : ./job02/job02.sh clean"
