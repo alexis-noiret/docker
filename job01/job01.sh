@@ -4,7 +4,8 @@
 #         sudo ./job01.sh clean    désinstalle Docker (voir job10)
 set -euo pipefail
 if [ "${1:-}" = clean ]; then
-  echo oui | exec bash "$(dirname "$0")/../job10/uninstall-docker.sh"
+  echo oui | bash "$(dirname "$0")/../job10/uninstall-docker.sh"
+  exit 0
 fi
 [ "$EUID" -eq 0 ] || { echo "Ce script doit être lancé avec sudo." >&2; exit 1; }
 
