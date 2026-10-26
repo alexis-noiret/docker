@@ -1,5 +1,11 @@
 # 🐳 Docker - Conteneurisation
 
+![Docker](https://img.shields.io/badge/Technology-Docker-2496ED)
+![Debian](https://img.shields.io/badge/OS-Debian%2013-A81D33)
+![VMware](https://img.shields.io/badge/Hyperviseur-VMware%20Workstation-607078)
+![Project](https://img.shields.io/badge/Project-Bachelor%20IT-orange)
+![Focus](https://img.shields.io/badge/Focus-Conteneurisation-green)
+
 > Découverte de Docker : images, conteneurs, Dockerfile, volumes, docker compose, registry local, Portainer.
 
 Projet réalisé dans le cadre du **Bachelor IT Cybersécurité** - La Plateforme, par **Alexis Noiret**.
