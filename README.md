@@ -8,7 +8,7 @@ Le sujet comporte 11 jobs et un bonus (« Pour aller plus loin »). Tout a été
 
 ---
 
-## Environnement
+## 🖥️ Environnement
 
 | Élément | Valeur |
 |---|---|
@@ -21,7 +21,9 @@ Le sujet comporte 11 jobs et un bonus (« Pour aller plus loin »). Tout a été
 
 Les mots de passe du dépôt (`root123`, `ftp123`, `app123`...) sont ceux d'un laboratoire jetable, demandés par l'énoncé. Ils ne doivent jamais servir en production.
 
-## Sommaire
+---
+
+## 📋 Sommaire
 
 - [Job 01 - Installer Docker (CLI seulement)](job01/README.md)
 - [Job 02 - Tester l'installation : hello-world](job02/README.md)
@@ -865,7 +867,7 @@ Tout ce qui précède a été fait à la main. Pour rejouer ce job seul, par exe
 
 ---
 
-## Scripts de démonstration (facultatifs)
+## 🧪 Scripts de démonstration (facultatifs)
 
 La documentation ci-dessus décrit ce qui a été fait **à la main**. En complément, chaque job dispose d'un script indépendant, utile pour refaire une démonstration sur une machine vierge : il ne fait que ce job, sans enchaîner les autres.
 
@@ -889,7 +891,9 @@ Sur une machine sans Docker, les scripts des jobs 02 à 11 lancent d'abord `job0
 
 Ports utilisés : 80, 21 et 21000-21010 (job 7 et bonus, à ne pas lancer en même temps), 2222 (job 4), 8081 (job 8), 5000 et 8082 (job 9), 9443 (Portainer), 8080 (phpMyAdmin).
 
-## Pense-bête soutenance : utiliser les scripts sur une VM vierge
+---
+
+## 📝 Pense-bête soutenance : utiliser les scripts sur une VM vierge
 
 Procédure testée sur une Debian 13 fraîchement installée (`debian-test`).
 
@@ -934,7 +938,9 @@ sudo bash job10/uninstall-docker.sh    # demande une confirmation : taper oui
 | Portainer : « timeout » à la première connexion | `docker restart portainer`, puis créer le compte admin dans les 5 minutes |
 | Docker absent sur la VM | Les scripts des jobs 02 à 11 lancent `job01.sh` d'eux-mêmes |
 
-## Structure du dépôt
+---
+
+## 📁 Structure du dépôt
 
 ```
 docker/
@@ -949,9 +955,20 @@ docker/
 └── lib/common.sh          # fonctions communes aux scripts de démo
 ```
 
-## Bilan et compétences
+---
+
+## 🧠 Compétences démontrées
 
 - **Administrer des infrastructures virtualisées** : installation de Docker sur Debian, gestion des images, conteneurs, volumes et réseaux.
 - **Mettre en production des évolutions** : Dockerfile et docker compose pour décrire une infrastructure sous forme de fichiers reproductibles ; registry local pour distribuer les images.
 - **Sécurité** : le socket Docker et le groupe `docker` donnent un accès root ; mots de passe de labo en clair, FTP non chiffré, registry sans authentification : points à durcir en production.
 - **Automatisation** : alias, scripts d'installation et de désinstallation, scripts de démonstration.
+
+---
+
+## 👤 Auteur
+
+**Alexis Noiret** — Bachelor IT Cybersécurité, La Plateforme
+
+- Portfolio : [alexis-noiret.students-laplateforme.io](https://alexis-noiret.students-laplateforme.io)
+- GitHub : [github.com/alexis-noiret](https://github.com/alexis-noiret)
